@@ -1,0 +1,41 @@
+<html>  
+<head>  
+<title>success</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>  
+<body>  
+<div class="jumbotron text-center"><p>File uploaded successfully</p> <br></div>
+ <strong class=""> File Name: {{name}} <br> </strong>
+<!-- Number of Emails: {{TOTAL_LINE}}  -->
+  </div>
+<p></p>
+  <div class="panel-group container-fluid">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h4>Duplicate emails</h4></div>
+      <div class="panel-body">
+      	{% for i in dup_email %}
+		{{i}}<br>
+		{% endfor %}
+      </div>
+    </div>
+ </div>
+
+<p></p>
+  <div class="panel-group container-fluid">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h4>Error emails</h4></div>
+      <div class="panel-body">
+      	{% for i in error_emails %}
+      	{{i}}<br>
+		{% endfor %}
+	</div>
+</div>
+</div>
+
+		<!-- {{error_emails}} -->
+</body>  
+</html>  
