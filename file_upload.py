@@ -1,16 +1,11 @@
 from flask import *  
 from temp1 import *
-from calendar import *
+
 app = Flask(__name__)  
 @app.route('/')  
 def upload():  
     return render_template("file_upload_form.html")  
  
-# @app.route('/calendar')  
-# def calendar():  
-#     printcal=calendar.month(2019,9)
-#     return 0
-
 
 @app.route('/success', methods = ['POST'])  
 def success():  
